@@ -36,27 +36,33 @@ export default function Home({dataProvinsi, dataHarian}) {
   
   return (
     <div className="container">
-      <header className="py-5">
+      <header className="py-5 mb-3">
         <h1 className="text-center mb-4">Covid Api Indonesia</h1>
         <p>
           api ini dibuat untuk tujuan pembelajaran, 
           data berasal dari api yang di sediakan oleh pemerintah indonesia
         </p>
-        <a className="btn btn-sm btn-primary me-2" target="blank" href={linkApi.harian}>
+        <a className="btn btn-sm btn-dark me-2" target="blank" href={linkApi.harian}>
           sumber api harian
         </a>
-        <a className="btn btn-sm btn-primary" target="blank" href={linkApi.provinsi}>
+        <a className="btn btn-sm btn-dark" target="blank" href={linkApi.provinsi}>
           sumber api provinsi
         </a>
       </header>
       
       <main>
-        <h5 className="pt-1 fw-light">url: api/provinsi</h5>
+        <h5 className="pt-1 fw-light">
+          url: api/provinsi 
+          <a target="_blank" href="/api/provinsi" className="text-white badge bg-dark rounded-pill ms-3 text-decoration-none">check</a>
+        </h5>
         <article className="mb-5 card">
           <code className="bg-light p-2">{JSON.stringify(dataProvinsi)}</code>
         </article>
         
-        <h5 className="pt-1 fw-light" id="title">url: api/harian</h5>
+        <h5 className="pt-1 fw-light">
+          url: api/harian
+            <a target="_blank" href="/api/harian" className="text-white badge bg-dark rounded-pill ms-3 text-decoration-none">check</a>
+        </h5>
         <article className="card">
           <code className="bg-light p-2">{JSON.stringify(dataHarian)}</code>
         </article>
