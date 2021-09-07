@@ -1,6 +1,6 @@
 import {useState} from "react"
 import {formatDataHarian, formatDataProvinsi} from "../utils/utils.js"
-
+import Link from "next/link"
 //dataprovinsi = {last_update, data}
 //dataHarian = [{}]
 
@@ -53,7 +53,9 @@ export default function Home({dataProvinsi, dataHarian}) {
       <main>
         <h5 className="pt-1 fw-light">
           url: api/provinsi 
-          <a target="_blank" href="/api/provinsi" className="text-white badge bg-dark rounded-pill ms-3 text-decoration-none">check</a>
+          <Link target="_blank" href="/api/provinsi">
+            <a className="text-white badge bg-dark rounded-pill ms-3 text-decoration-none">check</a>
+          </Link>
         </h5>
         <article className="mb-5 card">
           <code className="bg-light p-2">{JSON.stringify(dataProvinsi)}</code>
@@ -61,7 +63,9 @@ export default function Home({dataProvinsi, dataHarian}) {
         
         <h5 className="pt-1 fw-light">
           url: api/harian
-            <a target="_blank" href="/api/harian" className="text-white badge bg-dark rounded-pill ms-3 text-decoration-none">check</a>
+          <Link target="_blank" href="/api/harian">
+            <a className="text-white badge bg-dark rounded-pill ms-3 text-decoration-none">check</a>
+          </Link>
         </h5>
         <article className="card">
           <code className="bg-light p-2">{JSON.stringify(dataHarian)}</code>
